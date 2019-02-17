@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+  <title>AJAX App</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+  integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+  crossorigin=""></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+          height: 200px;
+          width: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        #mapid { height: 180px; }
+      </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">Consultando Clima</h1>
+
+    <div class="row">
+      <div class="col-md-4">
+          <!-- <div id="map"></div> -->
+          <div id="mapid"></div>
+      </div>
+      <div class="col-md-8"  id="escondido">
+          <div class="form-group">
+              <select class="form-control" id="select">
+                <option value="">Selecione una Ubicacion</option>
+                <option value="scl">SANTIAGO</option>
+                <option value="ccp">CONCEPCION</option>
+              </select>
+              
+            </div>
+        <h2 id="resumen"></h2>
+        <table class="table table-striped" >
+          <tr>
+            <td>Sensacion Termica: </td>
+            <td id="sensacion"></td>
+          </tr>
+          <tr>
+            <td>Probabilidad de lluvia: </td>
+            <td id="probabilidad"></td>
+          </tr>
+          <tr>
+            <td>Humedad Relativa: </td>
+            <td id="humedad"></td>
+          </tr>
+        </table>
+        <img src="" alt="" class="img-responsive">
+      </div>
+    </div>
+   
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+ 
+</body>
+
+</html>
